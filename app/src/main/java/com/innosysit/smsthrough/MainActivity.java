@@ -17,6 +17,8 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import org.w3c.dom.Text;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
@@ -73,6 +75,8 @@ public class MainActivity extends AppCompatActivity implements ItemSettingAdapte
         window.setAttributes(lp);
 
         TextView addButton = settingDialog.findViewById(R.id.addSelectButton);
+        TextView cancelButton = settingDialog.findViewById(R.id.setting_cancel);
+        TextView saveButton = settingDialog.findViewById(R.id.setting_save);
         RecyclerView recyclerView = settingDialog.findViewById(R.id.recyclerView);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), RecyclerView.HORIZONTAL, false);
@@ -99,6 +103,19 @@ public class MainActivity extends AppCompatActivity implements ItemSettingAdapte
             }
         });
 
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                settingDialog.dismiss();
+            }
+        });
+
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // TODO : 저장 기능 추가
+            }
+        });
 
     }
 
