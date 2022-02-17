@@ -48,9 +48,6 @@
                 android:orientation="horizontal"
                 android:weightSum="10">
 
-                <!-- 여기에 가로 스크롤뷰(RecyclerView)를 이용하여
-                수신자 명단 추가 -->
-
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
